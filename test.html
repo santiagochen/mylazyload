@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lazy test</title>
+	<style>
+	body{background: #000;}
+
+	img{width: auto; height: auto; margin: 20px; padding: 0;}
+	
+	iframe{width: 1280px; height: 400px; margin: 50px; padding: 0;}
+	</style>
+</head>
+<body>
+
+<!----> 
+
+<img class="img1 lazy" style="width:1280px; height=800px;" src="" data-load="images/test1.jpg" alt="">
+
+<div style="padding:10px 20px; margin:100px 0;">
+<img class="img1 lazy" src="images/loading.gif" data-load="images/test1.jpg" alt="">
+</div>
+
+<img class="img2 lazy" src="images/loading.gif" data-load="images/test1.jpg" alt="">
+
+
+<img class="img4 lazy" src="images/loading.gif" data-load="images/test2.jpg" alt="">
+
+<img class="img5" id="img5" src="images/loading.gif" data-load="images/test3.jpg" alt=""> 
+
+<!----> 
+<iframe class="if1" data-load="http://www.qq.com" src="" frameborder="0"></iframe>
+
+<iframe class="if1" data-load="http://www.qq.com" src="" frameborder="0"></iframe>
+
+<iframe class="if1 lazy" data-load="http://www.qq.com" src="" frameborder="0"></iframe>
+
+<iframe class="if1 lazy" data-load="http://www.youku.com" src="" frameborder="0"></iframe>
+
+ <iframe class="if1" data-load="http://www.qq.com" src="" frameborder="0"></iframe>
+
+<iframe class="if1 lazy" data-load="http://www.baidu.com" src="" frameborder="0"></iframe> 
+
+<script src="http://grocery.ex-walker.cn/jquery/jquery.1.10.2.min.js"></script>
+<script src="mylazyload.js"></script>	
+
+<script>
+$(document).ready(function(){
+	
+	$.mylazyload();
+})
+
+</script>
+
+</body>
+</html>
